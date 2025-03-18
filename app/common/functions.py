@@ -160,7 +160,8 @@ def get_pairing(df,df_all,uploaded_file, section):
                 # st.write(df.loc[df['Bd'] == tb])
                 df_all.to_csv(uploaded_file)
                 st.session_state.selected_row = None  # Close modal
-                st.experimental_rerun()  # Rerun app to update table
+                # st.experimental_rerun()
+                st.rerun()  # Rerun app to update table
                
 
             
