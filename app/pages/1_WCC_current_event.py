@@ -150,6 +150,7 @@ def get_pairing(df,df_all,uploaded_file, section):
     # Open modal when a row is selected
     if st.session_state.selected_row is not None:
         index_1=st.session_state.selected_row
+        # with st.expander(f"Enter Result for {st.session_state[pairing_table].at[st.session_state.selected_row, 'White']} vs {st.session_state[pairing_table].at[st.session_state.selected_row, 'Black']}"):
         with st.popover(f"Enter Result for {st.session_state[pairing_table].at[st.session_state.selected_row, 'White']} vs {st.session_state[pairing_table].at[st.session_state.selected_row, 'Black']}"):
         # with st.popover(f"Enter Result"):
             new_result = st.text_input("Enter Match Result:", key=section+"result_input")
