@@ -26,7 +26,7 @@ install: venv
 # Run the application (e.g., Streamlit app)
 # .PHONY: run
 # run:
-# 	$(VENV_DIR)/bin/python -m streamlit run $(APP)
+	$(VENV_DIR)/bin/python3 python3 -m streamlit run $(APP)
 
 # Run tests using pytest (or another testing tool)
 .PHONY: test
