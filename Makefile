@@ -24,9 +24,9 @@ install: venv
 	$(VENV_DIR)/bin/$(PIP) install -r $(REQUIREMENTS)
 
 # Run the application (e.g., Streamlit app)
-.PHONY: run
-run:
-	$(VENV_DIR)/bin/python -m streamlit run $(APP)
+# .PHONY: run
+# run:
+# 	$(VENV_DIR)/bin/python -m streamlit run $(APP)
 
 # Run tests using pytest (or another testing tool)
 .PHONY: test
