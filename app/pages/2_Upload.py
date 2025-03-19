@@ -100,14 +100,21 @@ def get_upload_pairing(df):
                 st.write(f'### :green[Pairing for {round_num} saved]')
                 # union with all_pairing file
                 uploaded_file ="./app/data/tournaments/current_tournament/pairing_all.csv"
-                df_all = pd.read_csv(uploaded_file)
-                df_all.columns=[c.lower() for c in df_all.columns]
-                # st.write(df_all[col_keep])
-                df_all=df_all.loc[(df_all['tournament']==tourname_name )& (df_all['round'] < round_num)]
-                # st.write(df_all[col_keep])
-                df_to_save=pd.concat([df_all[col_keep], df[col_keep]], axis=0)
-                df_to_save[col_keep].to_csv(f'./app/data/tournaments/current_tournament/pairing_all.csv')
-                # st.write('### :orange[Entry list saved]')
+                if round_num==1:
+                    df[col_keep].to_csv(f'./app/data/tournaments/current_tournament/pairing_all.csv')
+                else:
+                    try:
+                        df_all = pd.read_csv(uploaded_file)
+                        df_all.columns=[c.lower() for c in df_all.columns]
+                        # st.write(df_all[col_keep])
+                        df_all=df_all.loc[(df_all['tournament']==tourname_name )& (df_all['round'] != round_num)]
+                        df_to_save=pd.concat([df_all[col_keep], df[col_keep]], axis=0)
+                        df_to_save[col_keep].to_csv(f'./app/data/tournaments/current_tournament/pairing_all.csv')
+                    
+                        # st.write('### :orange[Entry list saved]')
+                    except:
+                        st.write('### :orange[Conflict information in pairing file, restart by uploading from round1]')
+
 
     else:
         st.write('## :red[file is not in correct format]')
@@ -124,6 +131,13 @@ def get_upload_standing(df):
        df.to_csv("./app/data/tournaments/current_tournament/standing_all.csv")
        st.write('### :orange[Standing saved]')
 
+def get_upload_grandpix(df):
+    st.write('## :orange[Grandpix standing file uploaded]')
+        
+    st.dataframe(df)  # Interactive table
+    if st.button("Confirmed"):
+       df.to_csv("./app/data/tournaments/current_tournament/grandpix_standing_all.csv")
+       st.write('### :orange[Grandpix standing saved]')
 
 def main():
     col1, col2, col3 = st.columns([2,2,2])
@@ -154,6 +168,10 @@ def main():
         elif upload_option =='Standing':
             get_upload_standing(df)
             # st.write(df.columns)
+        elif upload_option =='Grandpix':
+            get_upload_grandpix(df)
+            # st.write(df.columns)
+            
             
             
 

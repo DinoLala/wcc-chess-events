@@ -265,37 +265,50 @@ def main():
             df_all = pd.read_csv(uploaded_file)
             df_all.columns=[c.lower() for c in df_all.columns]
             df_all=df_all[['tournament','section','round','bd','res','white','res.1','black']]
+            # df_all = df_all.fillna('9999999')
+            # df_all['bd']=df_all['bd'].astype('int')
+            # df_all=df_all.replace('9999999','').replace(9999999,'')
 
             last_round=df_all['round'].max()
             tourname_name=df_all['tournament'].max()
             backup_file =f"./app/data/tournaments/old_tournaments/{tourname_name}_pairing_all.csv"
-            # st.subheader(f":orange[ Pairing Round {last_round}] ")
-            st.subheader(f":orange[{tourname_name}: Pairing Round {last_round}] ")
+            st.subheader(f":blue[{tourname_name}: Pairing Round {last_round}] ")
             
             
             # "2025 George O'Rourke Memorial"
             section_list=set(df_all['section'].to_list())
+            round_list=list(set(df_all['round'].to_list()))
+            round_list.sort()
             section_option = st.selectbox("Choose section:", list(section_list))
 
-            df_all=df_all[['tournament','section','round','bd','res','white','res.1','black']]
-            df_all = df_all.fillna('9999999')
 
-            df_all['bd']=df_all['bd'].astype('int')
-            df_all=df_all.replace('9999999','').replace(9999999,'')
 
             df=df_all.loc[(df_all['section']==section_option)]
             last_round=df_all['round'].max()
-            df=df.loc[df['round']==last_round]
-            st.subheader(f"{section_option.upper()} SECTION")
-            with st.expander("Click to expand"):
-                get_pairing( df,df_all,uploaded_file,section_option)
             
+            df=df.loc[df['round']==last_round]
+
+            st.subheader(f"{section_option.upper()} SECTION")
+            with st.expander(f":orange[{section_option} pairing:]"):
+                get_pairing( df,df_all,uploaded_file,section_option)
+
+            st.write('## other rounds')
+            for round in round_list[:-1]:
+                st.write(f'## :blue[ {str(round)}]')
+                df_other_round=df_all.loc[df_all['round']==round]
+                section_list_other=set(df_other_round['section'].to_list())
+                for section in section_list_other:
+                    st.write(f'### :orange[{section}]')
+                    st.dataframe(df_other_round.loc[df_other_round['section']==section])
+
+
             # save backup
             df_all.to_csv(backup_file)
 
 
     with tab4:
-        st.title(f"{tourname_name} ")
+        # st.title(f"{tourname_name} ")
+        st.subheader(f":orange[{tourname_name}  standing] ")
 
         standing_uploaded_file = "./app/data/tournaments/current_tournament/standing_all.csv"
         df_standing_all = pd.read_csv(standing_uploaded_file)
@@ -306,7 +319,7 @@ def main():
         for section in section_list:
             df_standing_section=df_standing_all.loc[df_standing_all['section']==section]
 
-            with st.expander(f":orange[{section} standing:]"):
+            with st.expander(f":blue[{section} standing:]"):
                 # st.subheader(f":orange[ Standing- Section: {section} Example]")
                 table_style = """
                 <style>
@@ -330,6 +343,7 @@ def main():
     
 
     with tab5:
+        st.subheader(f":orange[Grandpix standing] ")
         
         st.write('TBD')
         # Sample pairing table data
