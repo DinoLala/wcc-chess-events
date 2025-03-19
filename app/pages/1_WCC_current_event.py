@@ -343,10 +343,17 @@ def main():
     
 
     with tab5:
-        st.subheader(f":orange[Grandpix standing] ")
+        st.subheader(f":orange[Grand Prix standing] ")
         
         st.write('TBD')
-        # Sample pairing table data
+        file_path="./app/data/tournaments/current_tournament/grandprix_standing_all.csv"
+        # Check if the file exists
+        if os.path.exists(file_path):
+            df_grandprix = pd.read_csv(file_path)
+            print("✅ File found! Data loaded successfully.")
+            st.dataframe(df_grandprix)
+        else:
+            st.write("❌ No file found.")
 
 
 
