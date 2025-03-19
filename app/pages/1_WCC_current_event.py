@@ -30,8 +30,8 @@ def get_entry_list():
         tourname_name=df['tournament'][1]
         st.subheader(f"Entry list for {tourname_name}:")
 
-
-        df['player'] = df[['player','uscf_id']].apply(lambda x: f'<a href="https://www.uschess.org/msa/MbrDtlMain.php?{int(x[1])}" target="_blank">{x[0]}</a>', axis=1)
+        df=df.sort_values(by='rating', ascending=False).reset_index()
+        df['entry'] = df[['player','uscf_id']].apply(lambda x: f'<a href="https://www.uschess.org/msa/MbrDtlMain.php?{int(x[1])}" target="_blank">{x[0]}</a>', axis=1)
 
         # Display the DataFrame with hyperlinks
         table_style = """
@@ -51,7 +51,7 @@ def get_entry_list():
             """
         # Display the styled table with hyperlinks
         # st.markdown(table_style, unsafe_allow_html=True)
-        styled_table = df[['player','rating','section']].to_html(escape=False)
+        styled_table = df[['entry','rating','section']].to_html(escape=False)
         # Custom CSS for header color (orange)
         styled_table = styled_table.replace(
             '<thead>',
@@ -59,6 +59,17 @@ def get_entry_list():
         )
 
         st.markdown(styled_table, unsafe_allow_html=True)
+        # Convert DataFrame to CSV for download
+        csv = df[['player','rating','section']].to_csv(index=False)
+
+        # Create a download button for the CSV file
+        st.write('Download the entry list')
+        st.download_button(
+            label="Download CSV",
+            data=csv,
+            file_name="Entry_list.csv",
+            mime="text/csv"
+)
 
 def get_pairing(df,df_all,uploaded_file, section):
     TABLE_STYLE = """
@@ -216,7 +227,7 @@ def main():
     
     # Create tabs
 
-    tab1, tab2, tab3,tab4, tab5 = st.tabs(["Home", "Entry List", 'Pairing','Standing',"Grandpix Table"])
+    tab1, tab2, tab3,tab4, tab5 = st.tabs(["Info", "Entry List", 'Pairing','Standing',"Grandpix Table"])
     
     with tab1:
         st.header("Home Page")
