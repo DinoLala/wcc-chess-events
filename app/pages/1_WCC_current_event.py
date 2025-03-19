@@ -254,8 +254,15 @@ def main():
     tab1, tab2, tab3,tab4, tab5 = st.tabs(["Info", "Entry List", 'Pairing','Standing',"Grand Prix Table"])
     
     with tab1:
-        st.header("Home Page")
-    
+        st.subheader(":blue[ Tourmanent information: ]")
+        file_path="./app/data/tournaments/current_tournament/Tournament_info.txt"
+        try:
+            with open(file_path, "r") as file:
+                content = file.read()
+                st.text_area("", content, height=200)
+        except FileNotFoundError:
+            st.error("❌ File not found. Please save a file first.")
+
     with tab2:
         get_entry_list()
 

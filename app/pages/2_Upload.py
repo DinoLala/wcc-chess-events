@@ -138,39 +138,54 @@ def get_upload_grandprix(df):
     if st.button("Confirmed"):
        df.to_csv("./app/data/tournaments/current_tournament/grandprix_standing_all.csv")
        st.write('### :orange[Grand Prix standing saved]')
+def get_upload_tour_info():
+    st.write('### :red[Upload Tournament information]')
+    user_text = st.text_area("Enter your text here:", height=200)
+
+    st.write("Information:")
+    st.write(user_text)
+        
+
+    if st.button("Confirmed"):
+        with open("./app/data/tournaments/current_tournament/Tournament_info.txt", "w") as file:
+            file.write(user_text)
+            st.write('### :orange[Tournament information saved]')
 
 def main():
     col1, col2, col3 = st.columns([2,2,2])
-    upload_option_list=['Update rating','Entry list','Pairing','Standing','Grand Prix']
+    upload_option_list=['Tournament Information','Update rating','Entry list','Pairing','Standing','Grand Prix']
     with col1:
-        upload_option = st.selectbox("File to upload:", list(upload_option_list))
+        upload_option = st.selectbox("Upload option:", list(upload_option_list))
 
+    if upload_option =='Tournament Information':
+            get_upload_tour_info()
+    else:
+        # File uploader widget
+        st.subheader(f"📂 Upload and View a CSV File for: :red[{upload_option}]")
+        uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
-    # File uploader widget
-    st.subheader(f"📂 Upload and View a CSV File for: :red[{upload_option}]")
-    uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+        # Check if a file is uploaded
+        if uploaded_file is not None:
+            
+            # Read CSV into Pandas DataFrame
+            df = pd.read_csv(uploaded_file)
+            df.columns=[c.lower() for c in df.columns]
 
-    # Check if a file is uploaded
-    if uploaded_file is not None:
-        
-        # Read CSV into Pandas DataFrame
-        df = pd.read_csv(uploaded_file)
-        df.columns=[c.lower() for c in df.columns]
-
-        # Display the DataFrame
-        if upload_option =='Update rating':
-            get_update_rating(df)
-        elif upload_option =='Entry list':
-            get_upload_entry_list(df)
-        elif upload_option =='Pairing':
-            get_upload_pairing(df)
-            # st.write(df.columns)
-        elif upload_option =='Standing':
-            get_upload_standing(df)
-            # st.write(df.columns)
-        elif upload_option =='Grand Prix ':
-            get_upload_grandprix(df)
-            # st.write(df.columns)
+            # Display the DataFrame
+            if upload_option =='Update rating':
+                get_update_rating(df)
+            elif upload_option =='Entry list':
+                get_upload_entry_list(df)
+            elif upload_option =='Pairing':
+                get_upload_pairing(df)
+                # st.write(df.columns)
+            elif upload_option =='Standing':
+                get_upload_standing(df)
+                # st.write(df.columns)
+            elif upload_option =='Grand Prix':
+                get_upload_grandprix(df)
+                # st.write(df.columns)
+            
             
             
             
