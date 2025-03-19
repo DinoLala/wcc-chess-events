@@ -30,3 +30,5 @@ st.write(":blue[Wachusett Chess Club [website ](%s)]" % wcc_tournament)
 maca_oldtour_result="https://www.uschess.org/msa/AffDtlTnmtHst.php?T5000181"
 
 continental_tour="http://www.chesstour.com/refs.html"
+st.markdown("© 2025 Dinolala. All rights reserved.")
+st.markdown("**Disclaimer:** Please use this app at your own risk.")
