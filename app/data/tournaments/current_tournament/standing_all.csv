@@ -1,94 +1,94 @@
-section,rank,Place,Name,Rating,Rd 1,Rd 2,Rd 3,Rd 4,Rd 5,Total
-open,1,1,MIKE COMMISSO,1833,W37 (b),H---,W23 (w),W20 (b),W5 (w),4.5
-open,2,2-4,FEDERICO SANTONI,2034,W29 (w),W7 (b),W17 (w),W3 (b),U---,4
-open,3,,NIKITA PANASENKO,1947,W30 (b),W12 (w),W18 (b),L2 (w),W8 (b),4
-open,4,,TOBY BARRY,1734,W44 (b),L17 (w),W32 (b),W18 (w),W14 (b),4
-open,5,5-10,RAY PAULSON,1942,W31 (w),W21 (b),W27 (w),D6 (b),L1 (b),3.5
-open,6,,TODD TSAKIRIS,1847,W35 (b),W14 (w),D16 (b),D5 (w),D9 (b),3.5
-open,7,,DUY NGUYEN,1783,W42 (w),L2 (w),D10 (b),W29 (b),W16 (w),3.5
-open,8,,STEPHEN SMITH,1738,H---,W24 (b),W28 (w),W27 (b),L3 (w),3.5
-open,9,,JIM DONAHUE,1641,W51 (b),L18 (w),W39 (b),W11 (w),D6 (w),3.5
-open,10,,ANSH NANDURBARKAR,1572,H---,H---,D7 (w),W25 (b),W22 (w),3.5
-open,11,11-15,DAVE COUTURE,1835,W36 (w),D23 (b),H---,L9 (b),W29 (w),3
-open,12,,MARIANO RIVERA,1736,W38 (w),L3 (b),D31 (w),H---,W30 (b),3
-open,13,,DON OSTROWSKI,1630,W52 (w),D19 (w),L20 (b),D31 (b),W35 (w),3
-open,14,,KEN GURGE,1620,W53 (w),L6 (b),W36 (w),W21 (b),L4 (w),3
-open,15,,GEORGE JORDY,1561,H---,L20 (w),W24 (b),D23 (b),W27 (w),3
-open,16,16-26,BOB SECINO,1929,W25 (b),H---,D6 (w),H---,L7 (b),2.5
-open,17,,MIKE URBONAS,1908,W32 (w),W4 (b),L2 (b),H---,U---,2.5
-open,18,,ROGER CAPPALLO,1900,W33 (w),W9 (b),L3 (w),L4 (b),D23 (w),2.5
-open,19,,BRUCE FELTON,1885,W34 (w),D13 (b),H---,H---,U---,2.5
-open,20,,MIKE MANISY,1842,H---,W15 (b),W13 (w),L1 (w),U---,2.5
-open,21,,MICHAEL DAVID,1739,W43 (b),L5 (w),W30 (b),L14 (w),D26 (b),2.5
-open,22,,GARY BRASSARD,1719,W40 (w),L27 (b),W34 (w),H---,L10 (b),2.5
-open,23,,LARRY SPENCER,1623,W47 (b),D11 (w),L1 (b),D15 (w),D18 (b),2.5
-open,24,,TOM FRATTURELLI,1500,H---,L8 (w),L15 (w),W43 (b),W37 (b),2.5
-open,25,,FRED ABRAMOWITZ,1487,L16 (w),W38 (b),H---,L10 (w),W40 (w),2.5
-open,26,,BOB ANDERSON,1461,L27 (w),L40 (b),W45 (w),W38 (b),D21 (w),2.5
-open,27,27-38,GEORGE MIRIJANIAN,1900,W26 (b),W22 (w),L5 (b),L8 (w),L15 (b),2
-open,28,,ALONZO ROSS,1900,W39 (b),H---,L8 (b),H---,U---,2
-open,29,,PAUL LYNCH,1589,L2 (b),W37 (w),W35 (b),L7 (w),L11 (b),2
-open,30,,JAY GOGUEN,1557,L3 (w),W42 (b),L21 (w),W41 (b),L12 (w),2
-open,31,,MIKE BERGERON,1499,L5 (b),W43 (w),D12 (b),D13 (w),U---,2
-open,32,,WALTER PATON,1478,L17 (b),W44 (w),L4 (w),L36 (b),W47 (b),2
-open,33,,SAM PARK,1460,L18 (b),H---,H---,U---,W48 (w),2
-open,34,,BRIAN BIGLOW,1407,L19 (b),W51 (w),L22 (b),L37 (w),W44 (b),2
-open,35,,STEVE KOROSKENYI,1361,L6 (w),W46 (b),L29 (w),W48 (b),L13 (b),2
-open,36,,BRYAN MACDONALD,1323,L11 (b),W47 (w),L14 (b),W32 (w),U---,2
-open,37,,EMILY GAWBOY,1275,L1 (w),L29 (b),W52 (w),W34 (b),L24 (w),2
-open,38,,ALBENIE ALLAIN,1083,L12 (b),L25 (w),W53 (b),L26 (w),W49 (b),2
-open,39,39-40,MARK WHEELER,1447,L28 (w),W52 (b),L9 (w),D40 (b),U---,1.5
-open,40,,BRIAN SMITH,753,L22 (b),W26 (w),U---,D39 (w),L25 (b),1.5
-open,41,41-49,LARRY O'ROURKE,1333,H---,H---,U---,L30 (w),U---,1
-open,42,,HUGH MCLAUGHLIN,1263,L7 (b),L30 (w),W47 (b),U---,U---,1
-open,43,,JAMES ESSARY,1095,L21 (w),L31 (b),L48 (w),L24 (w),W52 (b),1
-open,44,,DAVID SMITH,847,L4 (w),L32 (b),L49 (w),W52 (b),L34 (w),1
-open,45,,AL BUMP,558,U---,U---,L26 (b),U---,W51 (w),1
-open,46,,SAM SMITH,176,U---,L35 (w),U---,W50 (b),U---,1
-open,47,,DAVID LIU,153,L23 (w),L36 (b),L42 (w),W51 (b),L32 (w),1
-open,48,,DANIEL YOUNG,unr.,U---,U---,W43 (b),L35 (w),L33 (b),1
-open,49,,ALEX COTE,unr.,U---,U---,W44 (b),U---,L38 (w),1
-open,50,50-53,PAUL LEBLANC,644,U---,U---,U---,L46 (w),U---,0
-open,51,,PATRICK SMITH,443,L9 (w),L34 (b),U---,L47 (w),L45 (b),0
-open,52,,PAUL SOLTYSIAK,387,L13 (b),L39 (w),L37 (b),L44 (w),L43 (w),0
-open,53,,NITHEESH BOPPANA,unr.,L14 (b),U---,L38 (w),U---,U---,0
-u1600,1,1,MIKE COMMISSO,1833,W37 (b),H---,W23 (w),W20 (b),W5 (w),4.5
-u1600,2,2-4,FEDERICO SANTONI,2034,W29 (w),W7 (b),W17 (w),W3 (b),U---,4
-u1600,3,,NIKITA PANASENKO,1947,W30 (b),W12 (w),W18 (b),L2 (w),W8 (b),4
-u1600,4,,TOBY BARRY,1734,W44 (b),L17 (w),W32 (b),W18 (w),W14 (b),4
-u1600,5,5-10,RAY PAULSON,1942,W31 (w),W21 (b),W27 (w),D6 (b),L1 (b),3.5
-u1600,6,,TODD TSAKIRIS,1847,W35 (b),W14 (w),D16 (b),D5 (w),D9 (b),3.5
-u1600,7,,DUY NGUYEN,1783,W42 (w),L2 (w),D10 (b),W29 (b),W16 (w),3.5
-u1600,8,,STEPHEN SMITH,1738,H---,W24 (b),W28 (w),W27 (b),L3 (w),3.5
-u1600,9,,JIM DONAHUE,1641,W51 (b),L18 (w),W39 (b),W11 (w),D6 (w),3.5
-u1600,10,,ANSH NANDURBARKAR,1572,H---,H---,D7 (w),W25 (b),W22 (w),3.5
-u1600,11,11-15,DAVE COUTURE,1835,W36 (w),D23 (b),H---,L9 (b),W29 (w),3
-u1600,12,,MARIANO RIVERA,1736,W38 (w),L3 (b),D31 (w),H---,W30 (b),3
-u1600,13,,DON OSTROWSKI,1630,W52 (w),D19 (w),L20 (b),D31 (b),W35 (w),3
-u1600,14,,KEN GURGE,1620,W53 (w),L6 (b),W36 (w),W21 (b),L4 (w),3
-u1600,15,,GEORGE JORDY,1561,H---,L20 (w),W24 (b),D23 (b),W27 (w),3
-u1600,16,16-26,BOB SECINO,1929,W25 (b),H---,D6 (w),H---,L7 (b),2.5
-u1600,17,,MIKE URBONAS,1908,W32 (w),W4 (b),L2 (b),H---,U---,2.5
-u1600,18,,ROGER CAPPALLO,1900,W33 (w),W9 (b),L3 (w),L4 (b),D23 (w),2.5
-u1600,19,,BRUCE FELTON,1885,W34 (w),D13 (b),H---,H---,U---,2.5
-u1600,20,,MIKE MANISY,1842,H---,W15 (b),W13 (w),L1 (w),U---,2.5
-u1600,21,,MICHAEL DAVID,1739,W43 (b),L5 (w),W30 (b),L14 (w),D26 (b),2.5
-u1600,22,,GARY BRASSARD,1719,W40 (w),L27 (b),W34 (w),H---,L10 (b),2.5
-u1600,23,,LARRY SPENCER,1623,W47 (b),D11 (w),L1 (b),D15 (w),D18 (b),2.5
-u1600,24,,TOM FRATTURELLI,1500,H---,L8 (w),L15 (w),W43 (b),W37 (b),2.5
-u1600,25,,FRED ABRAMOWITZ,1487,L16 (w),W38 (b),H---,L10 (w),W40 (w),2.5
-u1600,26,,BOB ANDERSON,1461,L27 (w),L40 (b),W45 (w),W38 (b),D21 (w),2.5
-u1600,27,27-38,GEORGE MIRIJANIAN,1900,W26 (b),W22 (w),L5 (b),L8 (w),L15 (b),2
-u1600,28,,ALONZO ROSS,1900,W39 (b),H---,L8 (b),H---,U---,2
-u1600,29,,PAUL LYNCH,1589,L2 (b),W37 (w),W35 (b),L7 (w),L11 (b),2
-u1600,30,,JAY GOGUEN,1557,L3 (w),W42 (b),L21 (w),W41 (b),L12 (w),2
-u1600,31,,MIKE BERGERON,1499,L5 (b),W43 (w),D12 (b),D13 (w),U---,2
-u1600,32,,WALTER PATON,1478,L17 (b),W44 (w),L4 (w),L36 (b),W47 (b),2
-u1600,33,,SAM PARK,1460,L18 (b),H---,H---,U---,W48 (w),2
-u1600,34,,BRIAN BIGLOW,1407,L19 (b),W51 (w),L22 (b),L37 (w),W44 (b),2
-u1600,35,,STEVE KOROSKENYI,1361,L6 (w),W46 (b),L29 (w),W48 (b),L13 (b),2
-u1600,36,,BRYAN MACDONALD,1323,L11 (b),W47 (w),L14 (b),W32 (w),U---,2
-u1600,37,,EMILY GAWBOY,1275,L1 (w),L29 (b),W52 (w),W34 (b),L24 (w),2
-u1600,38,,ALBENIE ALLAIN,1083,L12 (b),L25 (w),W53 (b),L26 (w),W49 (b),2
-u1600,39,39-40,MARK WHEELER,1447,L28 (w),W52 (b),L9 (w),D40 (b),U---,1.5
-u1600,40,,BRIAN SMITH,753,L22 (b),W26 (w),U---,D39 (w),L25 (b),1.5
+,section,rank,place,name,rating,rd 1,rd 2,rd 3,rd 4,rd 5,total
+0,open,1,1,MIKE COMMISSO,1833,W37 (b),H---,W23 (w),W20 (b),W5 (w),4.5
+1,open,2,2-4,FEDERICO SANTONI,2034,W29 (w),W7 (b),W17 (w),W3 (b),U---,4.0
+2,open,3,,NIKITA PANASENKO,1947,W30 (b),W12 (w),W18 (b),L2 (w),W8 (b),4.0
+3,open,4,,TOBY BARRY,1734,W44 (b),L17 (w),W32 (b),W18 (w),W14 (b),4.0
+4,open,5,5-10,RAY PAULSON,1942,W31 (w),W21 (b),W27 (w),D6 (b),L1 (b),3.5
+5,open,6,,TODD TSAKIRIS,1847,W35 (b),W14 (w),D16 (b),D5 (w),D9 (b),3.5
+6,open,7,,DUY NGUYEN,1783,W42 (w),L2 (w),D10 (b),W29 (b),W16 (w),3.5
+7,open,8,,STEPHEN SMITH,1738,H---,W24 (b),W28 (w),W27 (b),L3 (w),3.5
+8,open,9,,JIM DONAHUE,1641,W51 (b),L18 (w),W39 (b),W11 (w),D6 (w),3.5
+9,open,10,,ANSH NANDURBARKAR,1572,H---,H---,D7 (w),W25 (b),W22 (w),3.5
+10,open,11,11-15,DAVE COUTURE,1835,W36 (w),D23 (b),H---,L9 (b),W29 (w),3.0
+11,open,12,,MARIANO RIVERA,1736,W38 (w),L3 (b),D31 (w),H---,W30 (b),3.0
+12,open,13,,DON OSTROWSKI,1630,W52 (w),D19 (w),L20 (b),D31 (b),W35 (w),3.0
+13,open,14,,KEN GURGE,1620,W53 (w),L6 (b),W36 (w),W21 (b),L4 (w),3.0
+14,open,15,,GEORGE JORDY,1561,H---,L20 (w),W24 (b),D23 (b),W27 (w),3.0
+15,open,16,16-26,BOB SECINO,1929,W25 (b),H---,D6 (w),H---,L7 (b),2.5
+16,open,17,,MIKE URBONAS,1908,W32 (w),W4 (b),L2 (b),H---,U---,2.5
+17,open,18,,ROGER CAPPALLO,1900,W33 (w),W9 (b),L3 (w),L4 (b),D23 (w),2.5
+18,open,19,,BRUCE FELTON,1885,W34 (w),D13 (b),H---,H---,U---,2.5
+19,open,20,,MIKE MANISY,1842,H---,W15 (b),W13 (w),L1 (w),U---,2.5
+20,open,21,,MICHAEL DAVID,1739,W43 (b),L5 (w),W30 (b),L14 (w),D26 (b),2.5
+21,open,22,,GARY BRASSARD,1719,W40 (w),L27 (b),W34 (w),H---,L10 (b),2.5
+22,open,23,,LARRY SPENCER,1623,W47 (b),D11 (w),L1 (b),D15 (w),D18 (b),2.5
+23,open,24,,TOM FRATTURELLI,1500,H---,L8 (w),L15 (w),W43 (b),W37 (b),2.5
+24,open,25,,FRED ABRAMOWITZ,1487,L16 (w),W38 (b),H---,L10 (w),W40 (w),2.5
+25,open,26,,BOB ANDERSON,1461,L27 (w),L40 (b),W45 (w),W38 (b),D21 (w),2.5
+26,open,27,27-38,GEORGE MIRIJANIAN,1900,W26 (b),W22 (w),L5 (b),L8 (w),L15 (b),2.0
+27,open,28,,ALONZO ROSS,1900,W39 (b),H---,L8 (b),H---,U---,2.0
+28,open,29,,PAUL LYNCH,1589,L2 (b),W37 (w),W35 (b),L7 (w),L11 (b),2.0
+29,open,30,,JAY GOGUEN,1557,L3 (w),W42 (b),L21 (w),W41 (b),L12 (w),2.0
+30,open,31,,MIKE BERGERON,1499,L5 (b),W43 (w),D12 (b),D13 (w),U---,2.0
+31,open,32,,WALTER PATON,1478,L17 (b),W44 (w),L4 (w),L36 (b),W47 (b),2.0
+32,open,33,,SAM PARK,1460,L18 (b),H---,H---,U---,W48 (w),2.0
+33,open,34,,BRIAN BIGLOW,1407,L19 (b),W51 (w),L22 (b),L37 (w),W44 (b),2.0
+34,open,35,,STEVE KOROSKENYI,1361,L6 (w),W46 (b),L29 (w),W48 (b),L13 (b),2.0
+35,open,36,,BRYAN MACDONALD,1323,L11 (b),W47 (w),L14 (b),W32 (w),U---,2.0
+36,open,37,,EMILY GAWBOY,1275,L1 (w),L29 (b),W52 (w),W34 (b),L24 (w),2.0
+37,open,38,,ALBENIE ALLAIN,1083,L12 (b),L25 (w),W53 (b),L26 (w),W49 (b),2.0
+38,open,39,39-40,MARK WHEELER,1447,L28 (w),W52 (b),L9 (w),D40 (b),U---,1.5
+39,open,40,,BRIAN SMITH,753,L22 (b),W26 (w),U---,D39 (w),L25 (b),1.5
+40,open,41,41-49,LARRY O'ROURKE,1333,H---,H---,U---,L30 (w),U---,1.0
+41,open,42,,HUGH MCLAUGHLIN,1263,L7 (b),L30 (w),W47 (b),U---,U---,1.0
+42,open,43,,JAMES ESSARY,1095,L21 (w),L31 (b),L48 (w),L24 (w),W52 (b),1.0
+43,open,44,,DAVID SMITH,847,L4 (w),L32 (b),L49 (w),W52 (b),L34 (w),1.0
+44,open,45,,AL BUMP,558,U---,U---,L26 (b),U---,W51 (w),1.0
+45,open,46,,SAM SMITH,176,U---,L35 (w),U---,W50 (b),U---,1.0
+46,open,47,,DAVID LIU,153,L23 (w),L36 (b),L42 (w),W51 (b),L32 (w),1.0
+47,open,48,,DANIEL YOUNG,unr.,U---,U---,W43 (b),L35 (w),L33 (b),1.0
+48,open,49,,ALEX COTE,unr.,U---,U---,W44 (b),U---,L38 (w),1.0
+49,open,50,50-53,PAUL LEBLANC,644,U---,U---,U---,L46 (w),U---,0.0
+50,open,51,,PATRICK SMITH,443,L9 (w),L34 (b),U---,L47 (w),L45 (b),0.0
+51,open,52,,PAUL SOLTYSIAK,387,L13 (b),L39 (w),L37 (b),L44 (w),L43 (w),0.0
+52,open,53,,NITHEESH BOPPANA,unr.,L14 (b),U---,L38 (w),U---,U---,0.0
+53,u1600,1,1,MIKE COMMISSO,1833,W37 (b),H---,W23 (w),W20 (b),W5 (w),4.5
+54,u1600,2,2-4,FEDERICO SANTONI,2034,W29 (w),W7 (b),W17 (w),W3 (b),U---,4.0
+55,u1600,3,,NIKITA PANASENKO,1947,W30 (b),W12 (w),W18 (b),L2 (w),W8 (b),4.0
+56,u1600,4,,TOBY BARRY,1734,W44 (b),L17 (w),W32 (b),W18 (w),W14 (b),4.0
+57,u1600,5,5-10,RAY PAULSON,1942,W31 (w),W21 (b),W27 (w),D6 (b),L1 (b),3.5
+58,u1600,6,,TODD TSAKIRIS,1847,W35 (b),W14 (w),D16 (b),D5 (w),D9 (b),3.5
+59,u1600,7,,DUY NGUYEN,1783,W42 (w),L2 (w),D10 (b),W29 (b),W16 (w),3.5
+60,u1600,8,,STEPHEN SMITH,1738,H---,W24 (b),W28 (w),W27 (b),L3 (w),3.5
+61,u1600,9,,JIM DONAHUE,1641,W51 (b),L18 (w),W39 (b),W11 (w),D6 (w),3.5
+62,u1600,10,,ANSH NANDURBARKAR,1572,H---,H---,D7 (w),W25 (b),W22 (w),3.5
+63,u1600,11,11-15,DAVE COUTURE,1835,W36 (w),D23 (b),H---,L9 (b),W29 (w),3.0
+64,u1600,12,,MARIANO RIVERA,1736,W38 (w),L3 (b),D31 (w),H---,W30 (b),3.0
+65,u1600,13,,DON OSTROWSKI,1630,W52 (w),D19 (w),L20 (b),D31 (b),W35 (w),3.0
+66,u1600,14,,KEN GURGE,1620,W53 (w),L6 (b),W36 (w),W21 (b),L4 (w),3.0
+67,u1600,15,,GEORGE JORDY,1561,H---,L20 (w),W24 (b),D23 (b),W27 (w),3.0
+68,u1600,16,16-26,BOB SECINO,1929,W25 (b),H---,D6 (w),H---,L7 (b),2.5
+69,u1600,17,,MIKE URBONAS,1908,W32 (w),W4 (b),L2 (b),H---,U---,2.5
+70,u1600,18,,ROGER CAPPALLO,1900,W33 (w),W9 (b),L3 (w),L4 (b),D23 (w),2.5
+71,u1600,19,,BRUCE FELTON,1885,W34 (w),D13 (b),H---,H---,U---,2.5
+72,u1600,20,,MIKE MANISY,1842,H---,W15 (b),W13 (w),L1 (w),U---,2.5
+73,u1600,21,,MICHAEL DAVID,1739,W43 (b),L5 (w),W30 (b),L14 (w),D26 (b),2.5
+74,u1600,22,,GARY BRASSARD,1719,W40 (w),L27 (b),W34 (w),H---,L10 (b),2.5
+75,u1600,23,,LARRY SPENCER,1623,W47 (b),D11 (w),L1 (b),D15 (w),D18 (b),2.5
+76,u1600,24,,TOM FRATTURELLI,1500,H---,L8 (w),L15 (w),W43 (b),W37 (b),2.5
+77,u1600,25,,FRED ABRAMOWITZ,1487,L16 (w),W38 (b),H---,L10 (w),W40 (w),2.5
+78,u1600,26,,BOB ANDERSON,1461,L27 (w),L40 (b),W45 (w),W38 (b),D21 (w),2.5
+79,u1600,27,27-38,GEORGE MIRIJANIAN,1900,W26 (b),W22 (w),L5 (b),L8 (w),L15 (b),2.0
+80,u1600,28,,ALONZO ROSS,1900,W39 (b),H---,L8 (b),H---,U---,2.0
+81,u1600,29,,PAUL LYNCH,1589,L2 (b),W37 (w),W35 (b),L7 (w),L11 (b),2.0
+82,u1600,30,,JAY GOGUEN,1557,L3 (w),W42 (b),L21 (w),W41 (b),L12 (w),2.0
+83,u1600,31,,MIKE BERGERON,1499,L5 (b),W43 (w),D12 (b),D13 (w),U---,2.0
+84,u1600,32,,WALTER PATON,1478,L17 (b),W44 (w),L4 (w),L36 (b),W47 (b),2.0
+85,u1600,33,,SAM PARK,1460,L18 (b),H---,H---,U---,W48 (w),2.0
+86,u1600,34,,BRIAN BIGLOW,1407,L19 (b),W51 (w),L22 (b),L37 (w),W44 (b),2.0
+87,u1600,35,,STEVE KOROSKENYI,1361,L6 (w),W46 (b),L29 (w),W48 (b),L13 (b),2.0
+88,u1600,36,,BRYAN MACDONALD,1323,L11 (b),W47 (w),L14 (b),W32 (w),U---,2.0
+89,u1600,37,,EMILY GAWBOY,1275,L1 (w),L29 (b),W52 (w),W34 (b),L24 (w),2.0
+90,u1600,38,,ALBENIE ALLAIN,1083,L12 (b),L25 (w),W53 (b),L26 (w),W49 (b),2.0
+91,u1600,39,39-40,MARK WHEELER,1447,L28 (w),W52 (b),L9 (w),D40 (b),U---,1.5
+92,u1600,40,,BRIAN SMITH,753,L22 (b),W26 (w),U---,D39 (w),L25 (b),1.5

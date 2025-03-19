@@ -76,29 +76,86 @@ def get_upload_entry_list(df):
        df.to_csv('./app/data/tournaments/current_tournament/entry_list.csv')
        st.write('### :orange[Entry list saved]')
 
-
-col1, col2, col3 = st.columns([2,2,2])
-upload_option_list=['Update rating','Entry list','Pairing','Standing','Grandpix']
-with col1:
-    upload_option = st.selectbox("File to upload:", list(upload_option_list))
-
-
-# File uploader widget
-st.subheader(f"📂 Upload and View a CSV File for: :red[{upload_option}]")
-uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-
-# Check if a file is uploaded
-if uploaded_file is not None:
+def get_upload_pairing(df):
+    st.write('## :orange[ Pairing file uploaded]')
+    col_keep=['tournament','section','round','bd','res','white','res.1','black']
     
-    # Read CSV into Pandas DataFrame
-    df = pd.read_csv(uploaded_file)
-    df.columns=[c.lower() for c in df.columns]
+    st.dataframe(df)  # Interactive table
+    is_subset = set(col_keep).issubset(set(df.columns))
+    
 
-    # Display the DataFrame
-    if upload_option =='Update rating':
-        get_update_rating(df)
-    elif upload_option =='Entry list':
-        get_upload_entry_list(df)
+
+    print(is_subset) 
+    if is_subset:
+        round_value=df['round'].value_counts().reset_index()
+        tourname_name=df['tournament'].max()
+        if len(round_value)>1:
+            st.write('### :red[more than 1 round paired]')
+        else :
+            st.write('## :green[Review and confirm]')
+            round_num=round_value['round'].to_list()[0]
+            st.write(round_num,tourname_name)
+            if st.button(f"Confirmed {round_num} pairing"):
+                df[col_keep].to_csv(f'./app/data/tournaments/current_tournament/{round_num}_pairing.csv')
+                st.write(f'### :green[Pairing for {round_num} saved]')
+                # union with all_pairing file
+                uploaded_file ="./app/data/tournaments/current_tournament/pairing_all.csv"
+                df_all = pd.read_csv(uploaded_file)
+                df_all.columns=[c.lower() for c in df_all.columns]
+                # st.write(df_all[col_keep])
+                df_all=df_all.loc[(df_all['tournament']==tourname_name )& (df_all['round'] < round_num)]
+                # st.write(df_all[col_keep])
+                df_to_save=pd.concat([df_all[col_keep], df[col_keep]], axis=0)
+                df_to_save[col_keep].to_csv(f'./app/data/tournaments/current_tournament/pairing_all.csv')
+                # st.write('### :orange[Entry list saved]')
+
+    else:
+        st.write('## :red[file is not in correct format]')
         
-           
 
+
+
+
+def get_upload_standing(df):
+    st.write('## :orange[standing file uploaded]')
+        
+    st.dataframe(df)  # Interactive table
+    if st.button("Confirmed"):
+       df.to_csv("./app/data/tournaments/current_tournament/standing_all.csv")
+       st.write('### :orange[Standing saved]')
+
+
+def main():
+    col1, col2, col3 = st.columns([2,2,2])
+    upload_option_list=['Update rating','Entry list','Pairing','Standing','Grandpix']
+    with col1:
+        upload_option = st.selectbox("File to upload:", list(upload_option_list))
+
+
+    # File uploader widget
+    st.subheader(f"📂 Upload and View a CSV File for: :red[{upload_option}]")
+    uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+    # Check if a file is uploaded
+    if uploaded_file is not None:
+        
+        # Read CSV into Pandas DataFrame
+        df = pd.read_csv(uploaded_file)
+        df.columns=[c.lower() for c in df.columns]
+
+        # Display the DataFrame
+        if upload_option =='Update rating':
+            get_update_rating(df)
+        elif upload_option =='Entry list':
+            get_upload_entry_list(df)
+        elif upload_option =='Pairing':
+            get_upload_pairing(df)
+            # st.write(df.columns)
+        elif upload_option =='Standing':
+            get_upload_standing(df)
+            # st.write(df.columns)
+            
+            
+
+if __name__ == "__main__":
+    main()
