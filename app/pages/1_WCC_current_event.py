@@ -251,7 +251,7 @@ def main():
     
     # Create tabs
 
-    tab1, tab2, tab3,tab4, tab5 = st.tabs(["Info", "Entry List", 'Pairing','Standing',"Grandpix Table"])
+    tab1, tab2, tab3,tab4, tab5 = st.tabs(["Info", "Entry List", 'Pairing','Standing',"Grand Prix Table"])
     
     with tab1:
         st.header("Home Page")
