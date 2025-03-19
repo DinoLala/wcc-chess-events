@@ -131,17 +131,17 @@ def get_upload_standing(df):
        df.to_csv("./app/data/tournaments/current_tournament/standing_all.csv")
        st.write('### :orange[Standing saved]')
 
-def get_upload_grandpix(df):
-    st.write('## :orange[Grandpix standing file uploaded]')
+def get_upload_grandprix(df):
+    st.write('## :orange[Grand Prix standing file uploaded]')
         
     st.dataframe(df)  # Interactive table
     if st.button("Confirmed"):
-       df.to_csv("./app/data/tournaments/current_tournament/grandpix_standing_all.csv")
-       st.write('### :orange[Grandpix standing saved]')
+       df.to_csv("./app/data/tournaments/current_tournament/grandprix_standing_all.csv")
+       st.write('### :orange[Grand Prix standing saved]')
 
 def main():
     col1, col2, col3 = st.columns([2,2,2])
-    upload_option_list=['Update rating','Entry list','Pairing','Standing','Grandpix']
+    upload_option_list=['Update rating','Entry list','Pairing','Standing','Grand Prix']
     with col1:
         upload_option = st.selectbox("File to upload:", list(upload_option_list))
 
@@ -168,8 +168,8 @@ def main():
         elif upload_option =='Standing':
             get_upload_standing(df)
             # st.write(df.columns)
-        elif upload_option =='Grandpix':
-            get_upload_grandpix(df)
+        elif upload_option =='Grand Prix ':
+            get_upload_grandprix(df)
             # st.write(df.columns)
             
             
