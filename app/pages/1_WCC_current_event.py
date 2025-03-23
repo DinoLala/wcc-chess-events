@@ -164,7 +164,8 @@ def get_pairing(df,df_all,uploaded_file, section):
         # with st.expander(f"Enter Result for {st.session_state[pairing_table].at[st.session_state.selected_row, 'white']} vs {st.session_state[pairing_table].at[st.session_state.selected_row, 'black']}"):
         with st.popover(f"Enter Result for {st.session_state[pairing_table].at[st.session_state.selected_row, 'white']} vs {st.session_state[pairing_table].at[st.session_state.selected_row, 'black']}"):
         # with st.popover(f"Enter Result"):
-            new_result = st.text_input("Enter Match Result:", key=section+"result_input")
+            # new_result = st.text_input("Enter Match Result:", key=section+"result_input")
+            new_result = st.selectbox("Result for White :", [1,.5,0])
             if st.button(section+"Save Result"):
                 # Update the result in session state
                 if new_result!=.5:
@@ -301,12 +302,13 @@ def main():
 
             st.write('## other rounds')
             for round in round_list[:-1]:
-                st.write(f'## :blue[ {str(round)}]')
-                df_other_round=df_all.loc[df_all['round']==round]
-                section_list_other=set(df_other_round['section'].to_list())
-                for section in section_list_other:
-                    st.write(f'### :orange[{section}]')
-                    st.dataframe(df_other_round.loc[df_other_round['section']==section])
+                with st.expander(f":blue[{round} pairing:]"):
+                    # st.write(f'## :blue[ {str(round)}]')
+                    df_other_round=df_all.loc[df_all['round']==round]
+                    section_list_other=set(df_other_round['section'].to_list())
+                    for section in section_list_other:
+                        st.write(f'### :orange[{section}]')
+                        st.dataframe(df_other_round.loc[df_other_round['section']==section])
 
 
             # save backup
