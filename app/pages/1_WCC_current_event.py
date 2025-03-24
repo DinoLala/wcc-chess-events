@@ -354,11 +354,11 @@ def main():
     with tab5:
         st.subheader(f":orange[Grand Prix standing] ")
         
-        st.write('TBD')
+        # st.write('TBD')
         file_path="./app/data/tournaments/current_tournament/grandprix_standing_all.csv"
         # Check if the file exists
         if os.path.exists(file_path):
-            df_grandprix = pd.read_csv(file_path)
+            df_grandprix = pd.read_csv(file_path, index_col=0)
             print("✅ File found! Data loaded successfully.")
             st.dataframe(df_grandprix)
         else:
