@@ -1,22 +1,21 @@
-import pkgutil
-from importlib import import_module
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import pickle 
-
-# from app.common.search import process_html, get_player,get_tournaments,get_norm_summary,get_all_games
-# from app.common.functions import get_entry_list,get_pairing,get_standing
-
 import streamlit as st
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
 
-import requests
-import os
+with open('./app/config.yaml') as file:
+    config = yaml.load(file, Loader=SafeLoader)
+# Pre-hashing all plain text passwords once
+# st.write(stauth.Hasher.hash_passwords(config['credentials']))
 
-st.set_page_config(layout="wide")
+authenticator = stauth.Authenticate(
+    config['credentials'],
+    config['cookie']['name']
+)
+# Creating a login widget
+authentication_status = authenticator.login()
+
+
 def get_uscf_rating(uscf_id):
     url = f"https://www.uschess.org/msa/MbrDtlMain.php?{uscf_id}"
     
@@ -83,9 +82,6 @@ def get_upload_pairing(df):
     st.dataframe(df)  # Interactive table
     is_subset = set(col_keep).issubset(set(df.columns))
     
-
-
-    print(is_subset) 
     if is_subset:
         round_value=df['round'].value_counts().reset_index()
         tourname_name=df['tournament'].max()
@@ -189,6 +185,19 @@ def main():
             
             
             
-
 if __name__ == "__main__":
-    main()
+    
+
+
+    if st.session_state["authentication_status"] == False:
+        st.error("Username/password is incorrect")
+
+    elif st.session_state["authentication_status"] == None:
+        st.warning("Please enter your username and password")
+
+    elif st.session_state["authentication_status"] == True:
+
+        st.title('Upload file...')
+        main()
+
+
