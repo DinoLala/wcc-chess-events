@@ -192,37 +192,6 @@ def get_pairing(df,df_all,uploaded_file, section):
                 st.rerun()  # Rerun app to update table
                
 
-            
-
-def get_standing(tournament, section,uploaded_file):
-    
-
-    df = pd.read_csv(uploaded_file)
-
-    if uploaded_file is not None:
-        # Read the uploaded CSV file into a DataFrame
-        df = pd.read_csv(uploaded_file)
-        df = df.fillna('')
-        # Display the DataFrame with hyperlinks
-        table_style = """
-        <style>
-        .dataframe {
-            width: 800px;  /* Adjust width of the table */
-            margin-left: auto;
-            margin-right: auto;
-        }
-        th {
-            text-align: left;  /* Center the header text */
-        }
-        td {
-            text-align: left;  /* Optional: center-align table data cells */
-        }
-        </style>
-            """
-        # Display the styled table with hyperlinks
-        st.markdown(table_style, unsafe_allow_html=True)
-        st.markdown(df.to_html(escape=False), unsafe_allow_html=True)
-
 def load_entry_list():
     st.title("Upload and Display a CSV File")
 
@@ -244,7 +213,7 @@ def load_entry_list():
 
             # Save the file
             with open(save_path, "wb") as f:
-                f.write(uploaded_file.getbuffer())
+                f.write(df.getbuffer())
 
             st.success(f"File saved successfully at: {save_path}")
 def main():
@@ -320,7 +289,7 @@ def main():
         st.subheader(f":orange[{tourname_name}  standing] ")
 
         standing_uploaded_file = "./app/data/tournaments/current_tournament/standing_all.csv"
-        df_standing_all = pd.read_csv(standing_uploaded_file)
+        df_standing_all = pd.read_csv(standing_uploaded_file, index_col=0)
         df_standing_all = df_standing_all.fillna('')
 
         section_list=set(df_standing_all['section'].to_list())
@@ -329,25 +298,7 @@ def main():
             df_standing_section=df_standing_all.loc[df_standing_all['section']==section]
 
             with st.expander(f":blue[{section} standing:]"):
-                # st.subheader(f":orange[ Standing- Section: {section} Example]")
-                table_style = """
-                <style>
-                .dataframe {
-                width: 800px;  /* Adjust width of the table */
-                margin-left: auto;
-                margin-right: auto;
-                }
-                th {
-                text-align: left;  /* Center the header text */
-                }
-                td {
-                text-align: left;  /* Optional: center-align table data cells */
-                }
-                </style>
-                """
-                # Display the styled table with hyperlinks
-                st.markdown(table_style, unsafe_allow_html=True)
-                st.markdown(df_standing_section.to_html(escape=False), unsafe_allow_html=True)         
+                st.write(df_standing_section)        
 
     
 
