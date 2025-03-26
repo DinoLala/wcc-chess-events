@@ -113,7 +113,8 @@ def get_pairing(df,df_all,uploaded_file, section):
 
     # Display the pairing table
     st.subheader("Pairing Table")
-    table_html = """<table><tr><th>Bd</th>
+    table_html = """<table><tr>
+                    <th>Bd</th>
                     <th>Res</th>
                     <th>white</th>
                     <th>res.1</th>
@@ -242,23 +243,16 @@ def main():
             df_all = pd.read_csv(uploaded_file)
             df_all.columns=[c.lower() for c in df_all.columns]
             df_all=df_all[['tournament','section','round','bd','res','white','res.1','black']]
-            # df_all = df_all.fillna('9999999')
-            # df_all['bd']=df_all['bd'].astype('int')
-            # df_all=df_all.replace('9999999','').replace(9999999,'')
 
             last_round=df_all['round'].max()
             tourname_name=df_all['tournament'].max()
             backup_file =f"./app/data/tournaments/old_tournaments/{tourname_name}_pairing_all.csv"
-            st.subheader(f":blue[{tourname_name}: Pairing Round {last_round}] ")
+            st.subheader(f":blue[{tourname_name}: Pairing {last_round}] ")
             
-            
-            # "2025 George O'Rourke Memorial"
             section_list=set(df_all['section'].to_list())
             round_list=list(set(df_all['round'].to_list()))
             round_list.sort()
             section_option = st.selectbox("Choose section:", list(section_list))
-
-
 
             df=df_all.loc[(df_all['section']==section_option)]
             last_round=df_all['round'].max()
