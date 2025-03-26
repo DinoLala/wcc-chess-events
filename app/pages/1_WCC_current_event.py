@@ -263,7 +263,7 @@ def main():
             with st.expander(f":orange[{section_option} pairing:]"):
                 get_pairing( df,df_all,uploaded_file,section_option)
 
-            st.write('## other rounds')
+            st.write('## :blue[Other Rounds]')
             for round in round_list[:-1]:
                 with st.expander(f":blue[{round} pairing:]"):
                     # st.write(f'## :blue[ {str(round)}]')
