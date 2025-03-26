@@ -64,12 +64,12 @@ def get_entry_list():
 
         # Create a download button for the CSV file
         st.write('Download the entry list')
-        st.download_button(
+        st.download_button( 
             label="Download CSV",
             data=csv,
             file_name="Entry_list.csv",
             mime="text/csv"
-)
+        )
 
 def get_pairing(df,df_all,uploaded_file, section):
     TABLE_STYLE = """
@@ -191,6 +191,7 @@ def get_pairing(df,df_all,uploaded_file, section):
                 st.session_state.selected_row = None  # Close modal
                 # st.experimental_rerun()
                 st.rerun()  # Rerun app to update table
+
                
 
 def load_entry_list():
@@ -276,6 +277,16 @@ def main():
 
             # save backup
             df_all.to_csv(backup_file)
+            csv = df_all.to_csv(index=False)
+
+            # Create a download button for the CSV file
+            st.write('Download the Pairing file')
+            st.download_button( 
+            label="Download CSV",
+            data=csv,
+            file_name="pairing.csv",
+            mime="text/csv"
+            )
 
 
     with tab4:
