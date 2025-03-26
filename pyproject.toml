@@ -3,7 +3,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "chess fun"
+name = "wcc chess event"
 version = "1.0.0"
 
 description = "A fun page for who love chess"
